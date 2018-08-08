@@ -7,7 +7,7 @@ class BVolume{
     
     // MARK: Fields
     /**
-     * Volume view whic will be presented to the user instead of default system view.
+     * Volume view which will be presented to the user instead of default system view.
      */
     public var view:BVolumeView = BVolumeView()
     
@@ -52,8 +52,18 @@ class BVolume{
                                                selector: #selector(volumeChanged(notification:)),
                                                name: NSNotification.Name(rawValue: "AVSystemController_SystemVolumeDidChangeNotification"),
                                                object: nil)
-        view.isHidden = true
+        view.hide()
         window.addSubview(view)
+    }
+    
+    /**
+     * Stops watching for volume changes and removes view from window.
+     */
+    public func stop(){
+        NotificationCenter.default.removeObserver(self,
+                                                  name: NSNotification.Name(rawValue: "AVSystemController_SystemVolumeDidChangeNotification"),
+                                                  object: nil)
+        self.view.removeFromSuperview()
     }
     
     /**
@@ -68,18 +78,18 @@ class BVolume{
             view.setStyle(style: UIApplication.shared.statusBarStyle)
         }
         
+        self.view.show()
         // hide sttaus bar and show it again when duration has passed
         if self.hidesStatusBar {
             workItem.cancel()
             UIApplication.shared.isStatusBarHidden = true
             workItem = DispatchWorkItem(block: {
-                self.view.isHidden = true
+                self.view.hide()
                 UIApplication.shared.isStatusBarHidden = false
             })
             DispatchQueue.main.asyncAfter(deadline: .now() + self.hideDuration, execute: workItem)
         }
         
-        view.isHidden = false
         // notify about volume change
         if volume == 1.0 {
             view.updateWithVolume(volume: volume)

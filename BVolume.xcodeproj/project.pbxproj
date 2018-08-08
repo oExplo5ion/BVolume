@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04D791F220CD14C600E1EE79 /* BVolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D791F120CD14C600E1EE79 /* BVolumeView.swift */; };
+		048AF802211B2B160049010D /* BVolume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AF801211B2B160049010D /* BVolume.swift */; };
+		048AF804211B2B260049010D /* VolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AF803211B2B250049010D /* VolumeView.swift */; };
+		048AF806211B2B2C0049010D /* BVolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AF805211B2B2C0049010D /* BVolumeView.swift */; };
 		04F130D820CC49AA00515ACB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F130D720CC49AA00515ACB /* AppDelegate.swift */; };
 		04F130DA20CC49AA00515ACB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F130D920CC49AA00515ACB /* ViewController.swift */; };
 		04F130DD20CC49AA00515ACB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F130DB20CC49AA00515ACB /* Main.storyboard */; };
 		04F130DF20CC49AA00515ACB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F130DE20CC49AA00515ACB /* Assets.xcassets */; };
 		04F130E220CC49AA00515ACB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F130E020CC49AA00515ACB /* LaunchScreen.storyboard */; };
-		04F130EB20CC4A0D00515ACB /* BVolume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F130EA20CC4A0D00515ACB /* BVolume.swift */; };
-		04F130ED20CC542300515ACB /* VolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F130EC20CC542300515ACB /* VolumeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04D791F120CD14C600E1EE79 /* BVolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BVolumeView.swift; sourceTree = "<group>"; };
+		048AF801211B2B160049010D /* BVolume.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BVolume.swift; sourceTree = "<group>"; };
+		048AF803211B2B250049010D /* VolumeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeView.swift; sourceTree = "<group>"; };
+		048AF805211B2B2C0049010D /* BVolumeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BVolumeView.swift; sourceTree = "<group>"; };
 		04F130D420CC49AA00515ACB /* BVolume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BVolume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F130D720CC49AA00515ACB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F130D920CC49AA00515ACB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,8 +28,6 @@
 		04F130DE20CC49AA00515ACB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04F130E120CC49AA00515ACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04F130E320CC49AA00515ACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04F130EA20CC4A0D00515ACB /* BVolume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BVolume.swift; sourceTree = "<group>"; };
-		04F130EC20CC542300515ACB /* VolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,8 @@
 		04D791F020CD0E5100E1EE79 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				04F130EC20CC542300515ACB /* VolumeView.swift */,
+				048AF805211B2B2C0049010D /* BVolumeView.swift */,
+				048AF803211B2B250049010D /* VolumeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -83,8 +84,7 @@
 		04F130E920CC49FF00515ACB /* BVolume */ = {
 			isa = PBXGroup;
 			children = (
-				04F130EA20CC4A0D00515ACB /* BVolume.swift */,
-				04D791F120CD14C600E1EE79 /* BVolumeView.swift */,
+				048AF801211B2B160049010D /* BVolume.swift */,
 			);
 			path = BVolume;
 			sourceTree = "<group>";
@@ -161,11 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04F130EB20CC4A0D00515ACB /* BVolume.swift in Sources */,
 				04F130DA20CC49AA00515ACB /* ViewController.swift in Sources */,
-				04F130ED20CC542300515ACB /* VolumeView.swift in Sources */,
+				048AF802211B2B160049010D /* BVolume.swift in Sources */,
+				048AF804211B2B260049010D /* VolumeView.swift in Sources */,
 				04F130D820CC49AA00515ACB /* AppDelegate.swift in Sources */,
-				04D791F220CD14C600E1EE79 /* BVolumeView.swift in Sources */,
+				048AF806211B2B2C0049010D /* BVolumeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

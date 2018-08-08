@@ -9,4 +9,14 @@ class BVolumeView:MPVolumeView{
     func setStyle(style:UIStatusBarStyle){}
     
     func updateWithVolume(volume:Float){}
+    
+    /**
+     * Called when view should be visible
+     */
+    func show(){}
+    
+    /**
+     * Called when view should be hidden
+     */
+    func hide(){}
 }
